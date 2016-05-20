@@ -1,0 +1,14 @@
+<div class="empty-view">
+<div>
+    <img ID="imgLogo" src="Images/Logo.jpg" width="100%" />
+</div>
+<div class="modal"><!-- Place at bottom of page --></div>
+    <script>
+    $body = $("body");
+
+$(document).on({
+    ajaxStart: function() { $body.addClass("loading");    },
+     ajaxStop: function() { $body.removeClass("loading"); }    
+});
+    </script>
+</div>

@@ -1,3 +1,32 @@
+body.loading {
+    overflow: hidden;   
+}
+
+body.loading .modal {
+    display: block;
+}
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+                url('http://i.stack.imgur.com/FhHRx.gif') 
+                50% 50% 
+                no-repeat;
+}
+.empty-view {
+    position: absolute;
+    top: 0;
+    min-width: 100%;
+    min-height: 100vh;
+    background-color:#FFFFFF
+    background-size: cover;
+}
+
 #kendoUiMobileApp .image-with-text img {
     float: left;
     margin-right: 15px;

@@ -3,19 +3,16 @@
   "views": [
     {
       "type": "kendo-ui-mobile:view",
-      "name": "home",
+      "name": "homeView",
       "components": [],
-      "title": "Home View",
-      "addToNavigation": true,
-      "icon": "home"
+      "title": "Kitap Dostum",
+      "addToNavigation": false
     }
   ],
   "dataProviders": [],
   "name": "kendoUiMobileApp",
-  "navigation": "tabstrip",
-  "view": "home",
-  "transition": "slide",
-  "showMoreTab": false,
+  "navigation": "drawer",
+  "view": "homeView",
   "skin": "flat",
   "skinMainColor": "#1a1a1a",
   "skinTextColor": "#ffffff",

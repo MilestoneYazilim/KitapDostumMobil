@@ -8,9 +8,8 @@
     var bootstrap = function() {
         $(function() {
             app.mobileApp = new kendo.mobile.Application(document.body, {
-                transition: 'slide',
                 skin: 'flat',
-                initial: 'components/home/view.html'
+                initial: 'components/homeView/view.html'
             });
         });
     };
@@ -20,6 +19,20 @@
             if (navigator && navigator.splashscreen) {
                 navigator.splashscreen.hide();
             }
+
+            var element = document.getElementById('appDrawer');
+            if (typeof(element) != 'undefined' && element !== null) {
+                if (window.navigator.msPointerEnabled) {
+                    $('#navigation-container').on('MSPointerDown', 'a', function(event) {
+                        app.keepActiveState($(this));
+                    });
+                } else {
+                    $('#navigation-container').on('touchstart', 'a', function(event) {
+                        app.keepActiveState($(this).closest('li'));
+                    });
+                }
+            }
+
             bootstrap();
         }, false);
     } else {
